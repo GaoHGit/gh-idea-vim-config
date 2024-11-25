@@ -1,0 +1,67 @@
+"ESC键映射为两次j键
+inoremap jk <Esc>
+" 设置搜索高亮
+set hlsearch
+"设置在光标距离窗口顶部或底部一定行数时，开始滚动屏幕内容的行为
+set scrolloff=10
+"关闭当前窗口
+nnoremap <Space>w :action CloseContent<CR>
+set surround
+nnoremap <Space>r :action ActivateRemoteHostToolWindow<CR>
+
+
+"nnoremap <Space><Space> :action emacsIDEAs.AceJump<CR>
+nnoremap <Space>e :action emacsIDEAs.AceJumpSelect<CR>
+nnoremap <Space>t :action ActivateTerminalToolWindow<CR>
+nnoremap <Space>b :action ActivateDebugToolWindow<CR>
+
+nnoremap <Space>j :action Forward<CR>
+
+nnoremap <Space>k :action Back<CR>
+nnoremap <Space>se :action ActivateServicesToolWindow<CR>
+nnoremap <Space>sh :action SplitHorizontally<CR>
+nnoremap <Space>sv :action OpenInRightSplit<CR>
+nnoremap <Space>nj :action FindNext<CR>
+nnoremap <Space>nk :action FindPrevious<CR>
+nnoremap <Space>le :action ActivateleetcodeToolWindow<CR>
+nnoremap <Space>ls :action leetcode.editor.SubmitAction<CR>
+nnoremap <Space>v <C-v>
+vmap <Space>i g<C-a>
+nnoremap <Space>-c <C>
+nmap <Space>h     <C-w>w
+nnoremap rn :action RenameElement<CR>
+"将光标移动到上一个方法的声明处
+nmap gk <action>(MethodUp)
+nmap gj <action>(MethodDown)
+" last changed in current buffer(file)
+"跳转到当前接口或抽象类的实现处
+nmap gi <action>(GotoImplementation)
+"跳转到下一个错误或警告
+nmap ge <action>(GotoNextError)
+nmap gh <action>(ShowNavBar)
+nmap gv <action>(Tool_外部工具_vinn)
+
+set which-key
+set timeoutlen=5000
+
+"set sneak
+"Plug 'easymotion/vim-easymotion'
+let mapleader=","
+"set easymotion
+"set surround
+"set multiple-cursors
+
+"map <Space><Space> <Plug>(easymotion-prefix)
+nnoremap <leader>m :action EditorPageDown<CR>
+nnoremap <leader>j :action EditorPageUp<CR>
+nnoremap <leader>reh :action RESTClient.ShowHistory<CR>
+
+map  f <action>(AceAction)
+vmap <Space>a <action>(one.util.ideaplugin.screenshoter.CopyImageAction)
+
+
+nnoremap m :action cn.wind.action.NextAction<CR>
+nnoremap rr :action RunClass<CR>
+nnoremap rd :action Debug<CR>
+
+vmap w :action EditorSelectWord<CR>
